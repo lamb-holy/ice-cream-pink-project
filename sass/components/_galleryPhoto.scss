@@ -1,0 +1,17 @@
+.gallery-photo{
+    width: 100%;
+    position: relative;
+    bottom: 200px;
+}
+
+@media (min-width: 768px){
+    .gallery-photo{
+        bottom: 270px;
+    }
+}
+
+@media (min-width: 1024px){
+    .gallery-photo{
+        bottom: 380px;
+    }
+}
