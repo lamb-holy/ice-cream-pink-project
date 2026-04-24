@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
 	<meta charset="UTF-8" />
@@ -45,8 +45,7 @@
 				</ul>
 			</nav>
 			<div class="header-holder">
-				<!-- <i class="bi bi-list"></i> -->
-				<button class="hamburger" id="triggerBtn" aria-label="Відкрити меню">
+				<button class="listik" data-modal-open-header>
 					<i class="bi bi-list"></i>
 				</button>
 				<button class="btn header--btn">
@@ -54,28 +53,26 @@
 				</button>
 			</div>
 
+			<div class="backdrop-header is-hidden-header" data-modal-header>
+				<div class="modal-header">
+					<div class="modal-header--holder">
+						<button class="btn-close-header" data-modal-close-header>
+							<i class="bi bi-x-lg"></i>
+						</button>
+						<button class="btn header--btn header--btn-modal">
+							Buy now <i class="bi bi-chevron-right"></i>
+						</button>
+						<nav class="drawer-nav">
+							<a class="header-link" href="#">Home</a>
+							<a class="header-link" href="#">About us</a>
+							<a class="header-link" href="#">How it's made?</a>
+							<a class="header-link" href="#">Our products</a>
+							<a class="header-link" href="#">Contact</a>
+						</nav>
+					</div>
 
-
-
-			<div class="menu-overlay" id="overlay">
-				<div class="drawer" id="drawer" role="dialog" aria-label="Навігаційне меню">
-					<button class="drawer-close" id="closeBtn" aria-label="Закрити меню">
-						<i class="bi bi-x-lg"></i>
-					</button>
-					<button class="drawer-cta">
-						Buy now <i class="bi bi-chevron-right"></i>
-					</button>
-					<nav class="drawer-nav">
-						<a href="#">Home</a>
-						<a href="#">About us</a>
-						<a href="#">How it's made?</a>
-						<a href="#">Our products</a>
-						<a href="#">Contact</a>
-					</nav>
 				</div>
 			</div>
-
-
 
 		</div>
 	</header>
@@ -138,11 +135,10 @@
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 							labore et.
 						</p>
-						<button id="openModal" class="product--btn">
+						<button class="product--btn" data-modal-open-product>
 							<i class="bi bi-arrow-right-short"></i>
 						</button>
 					</div>
-
 					<div class="product product--beige">
 						<img class="product-img" src="./image/icecoffe.webp" alt="Ice Coffee" />
 						<h3 class="product-title">ICE COFFEE</h3>
@@ -151,11 +147,10 @@
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 							labore et.
 						</p>
-						<button id="openModal" class="product--btn">
+						<button class="product--btn" data-modal-open-product2>
 							<i class="bi bi-arrow-right-short"></i>
 						</button>
 					</div>
-
 					<div class="product product--green">
 						<img class="product-img" src="./image/milkshake.webp" alt="Milkshake" />
 						<h3 class="product-title">MILKSHAKES</h3>
@@ -164,41 +159,111 @@
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 							labore et.
 						</p>
-						<button id="openModal" class="product--btn">
+						<button class="product--btn" data-modal-open-product3>
 							<i class="bi bi-arrow-right-short"></i>
 						</button>
-						<div id="myModal" class="modal-qq">
-							<div class="modal-content">
-								<span class="close-btn">&times;</span>
-
-								<div class="modal-inner">
-									<div class="modal-left">
-										<img src="./image/icecreamsec2.webp" alt="Ice Cream" />
-									</div>
-
-									<div class="modal-right">
-										<h3>INGREDIENTS</h3>
-										<ul>
-											<li>Lorem</li>
-											<li>Ipsum</li>
-											<li>Anet</li>
-											<li>strawberry</li>
-											<li>milk</li>
-										</ul>
-
-										<h3>HOW IT’S MADE?</h3>
-										<p>
-											Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-											eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-											voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-											clita kasd gubergren, no sea takimata sanctus est
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
+			</div>
+			<div class="backdrop-product is-hidden-product" data-modal-product>
+				<div class="modal-product">
+					<button class="btn-close-product" data-modal-close-product>✕</button>
+					<div class="modal-product-content">
+						<div class="modal-product-left">
+							<img class="modal-product-image" src="./image/morozovo1.webp" alt="Ice Cream">
+						</div>
+						<div class="modal-product-right">
+							<h2 class="modal-product-title">INGREDIENTS</h2>
+							<ul class="modal-product-list">
+								<li>Lorem</li>
+								<li>Ipsum</li>
+								<li>Anet</li>
+								<li>stawberry</li>
+								<li>milk</li>
+							</ul>
+						</div>
+					</div>
+					<div class="modal-product-bottom">
+						<h3 class="modal-product-subtitle">HOW IT’S MADE?</h3>
+						<p class="modal-product-text">
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+							eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+							voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+							Stet clita kasd gubergren, no sea takimata sanctus est
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="backdrop-product2 is-hidden-product2" data-modal-product2>
+				<div class="modal-product2">
+					<button class="btn-close-product2" data-modal-close-product2>✕</button>
+					<div class="modal-product-content2">
+
+						<div class="modal-product-left2">
+							<div class="modal-product-image-wrapper2">
+								<img src="./image/icecoffee2.webp" alt="Ice Cream" class="modal-product-image2">
+							</div>
+						</div>
+
+						<div class="modal-product-right2">
+							<h2 class="modal-product-title2">INGREDIENTS</h2>
+
+							<ul class="modal-product-list2">
+								<li>Lorem</li>
+								<li>Ipsum</li>
+								<li>Anet</li>
+								<li>stawberry</li>
+								<li>milk</li>
+							</ul>
+						</div>
+
+					</div>
+
+					<div class="modal-product-bottom2">
+						<h3 class="modal-product-subtitle2">HOW IT’S MADE?</h3>
+						<p class="modal-product-text2">
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+							eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+							voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+							Stet clita kasd gubergren, no sea takimata sanctus est
+						</p>
+					</div>
+
+				</div>
+			</div>
+			<div class="backdrop-product3 is-hidden-product3" data-modal-product3>
+				<div class="modal-product3">
+					<button class="btn-close-product3" data-modal-close-product3>✕</button>
+					<div class="modal-product-content3">
+						<div class="modal-product-left3">
+							<div class="modal-product-image-wrapper3">
+								<img src="./image/chocopie3.webp" alt="Ice Cream" class="modal-product-image3">
+							</div>
+						</div>
+						<div class="modal-product-right3">
+							<h2 class="modal-product-title3">INGREDIENTS</h2>
+							<ul class="modal-product-list3">
+								<li>Lorem</li>
+								<li>Ipsum</li>
+								<li>Anet</li>
+								<li>stawberry</li>
+								<li>milk</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="modal-product-bottom3">
+						<h3 class="modal-product-subtitle3">HOW IT’S MADE?</h3>
+						<p class="modal-product-text3">
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+							eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+							voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+							Stet clita kasd gubergren, no sea takimata sanctus est
+						</p>
+					</div>
+
+				</div>
+			</div>
 		</section>
 		<section class="howmade">
 			<div class="container how-made--container">
@@ -223,10 +288,8 @@
 						<p class="text text--light">
 							Aliquam erat volutpat. Aenean accumsan.
 						</p>
-						<button href="./steps.html">
-							<a href="./steps.html" class="btn read-more-link">Read more <i
-									class="bi bi-chevron-right"></i></a>
-						</button>
+						<a href="./steps.html" class="btn read-more-link">Read more <i
+								class="bi bi-chevron-right"></i></a>
 					</div>
 				</div>
 				<div class="numbers-holder">
@@ -347,13 +410,13 @@
 					</div>
 				</div>
 				<div class="locations-buttons">
-					<button id="openModal--loc" class="btn location--btn-red">Our Locations <i
+					<button class="btn location--btn-red" data-modal-open-loc>Our Locations <i
 							class="bi bi-chevron-right"></i></button>
 					<button class="btn location--btn-white">Franchise <i class="bi bi-chevron-right"></i></button>
 				</div>
-				<div id="myModal--loc" class="modal--loc">
-					<div class="modal-content--loc" style="border-radius: 40px;">
-						<span class="close-btn--loc">
+				<div class="backdrop-loc is-hidden-loc" data-modal-loc>
+					<div class="modal-loc" style="border-radius: 20px;">
+						<span class="btn-close-loc" data-modal-close-loc>
 							<svg width="25" height="25" viewBox="0 0 25 25" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<g clip-path="url(#clip0_81653_782)">
@@ -376,10 +439,12 @@
 								<p class="text modalka--text">We are always there! Visit our <br>
 									nearest cafe and try our new <br>
 									products.</p>
-								<button class="btn modalka--btn-red">Find nearest locations <i
-										class="bi bi-chevron-right"></i></button>
-								<button class="btn modalka--btn-white">More info <i
-										class="bi bi-chevron-right"></i></button>
+								<div class="modalka-left--buttons">
+									<button class="btn modalka--btn-red">Find nearest locations <i
+											class="bi bi-chevron-right"></i></button>
+									<button class="btn modalka--btn-white">More info <i
+											class="bi bi-chevron-right"></i></button>
+								</div>
 							</div>
 							<div class="modalka-right">
 								<img class="path-img" src="./image/path.webp" alt="path">
@@ -412,7 +477,6 @@
 			<p class="footer-copy">© 2019 - IceCream. All Rights Reserved.</p>
 		</div>
 	</footer>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 	<script src="./js/modal.js"></script>
 </body>
 

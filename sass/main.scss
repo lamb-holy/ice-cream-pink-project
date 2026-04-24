@@ -1,11 +1,13 @@
-@import "./base/body";
-@import "./base/container";
+@import "./base/common";
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./layout/header";
 @import "./components/headerModal";
 @import "./layout/hero";
 @import "./layout/products";
+@import "./components/productsModal1";
+@import "./components/productsModal2";
+@import "./components/productsModal3";
 @import "./layout/howmade";
 @import "./components/galleryPhoto";
 @import "./layout/reviews";
